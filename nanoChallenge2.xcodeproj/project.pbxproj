@@ -12,6 +12,7 @@
 		C0F55FB02296D06B0017CC0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0F55FAE2296D06B0017CC0F /* Main.storyboard */; };
 		C0F55FB22296D06C0017CC0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0F55FB12296D06C0017CC0F /* Assets.xcassets */; };
 		C0F55FB52296D06C0017CC0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0F55FB32296D06C0017CC0F /* LaunchScreen.storyboard */; };
+		C0F55FC22296DE280017CC0F /* Personagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F55FC12296DE280017CC0F /* Personagem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		C0F55FB12296D06C0017CC0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0F55FB42296D06C0017CC0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0F55FB62296D06C0017CC0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0F55FC12296DE280017CC0F /* Personagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personagem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,18 +56,19 @@
 		C0F55FA92296D06B0017CC0F /* nanoChallenge2 */ = {
 			isa = PBXGroup;
 			children = (
+				C0F55FC02296DE160017CC0F /* Model */,
 				EB3F9BD52296D3F000663E04 /* Support */,
 				EB3F9BD42296D3E200663E04 /* View */,
 				EB3F9BD32296D3D000663E04 /* Controller */,
-				EB3F9BD22296D39600663E04 /* Model */,
 				C0F55FB12296D06C0017CC0F /* Assets.xcassets */,
 			);
 			path = nanoChallenge2;
 			sourceTree = "<group>";
 		};
-		EB3F9BD22296D39600663E04 /* Model */ = {
+		C0F55FC02296DE160017CC0F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C0F55FC12296DE280017CC0F /* Personagem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0F55FAD2296D06B0017CC0F /* ViewController.swift in Sources */,
+				C0F55FC22296DE280017CC0F /* Personagem.swift in Sources */,
 				C0F55FAB2296D06B0017CC0F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

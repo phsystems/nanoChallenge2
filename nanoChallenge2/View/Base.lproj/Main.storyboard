@@ -18,44 +18,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nII-Lo-xlP">
-                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nII-Lo-xlP">
+                                <rect key="frame" x="0.0" y="156" width="414" height="722"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="200" id="tuL-qV-7Fa" customClass="CellTableViewCell" customModule="nanoChallenge2" customModuleProvider="target">
+                                    <tableViewCell autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.20000000000000001" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="200" id="tuL-qV-7Fa" customClass="CellTableViewCell" customModule="nanoChallenge2" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tuL-qV-7Fa" id="Jfd-Gc-43c">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="199.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7Cs-4H-7bR">
-                                                    <rect key="frame" x="5" y="20" width="389" height="169.5"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Breaking_Bad_title_card" translatesAutoresizingMaskIntoConstraints="NO" id="G3j-bD-MUc">
+                                                    <rect key="frame" x="-19" y="11" width="546" height="178"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="600" id="GsE-Lq-7PP"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7Cs-4H-7bR">
+                                                    <rect key="frame" x="5" y="10" width="389" height="180"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Jesse_Pinkman" highlightedImage="Jesse_Pinkman" translatesAutoresizingMaskIntoConstraints="NO" id="4Gh-zS-MAT">
-                                                            <rect key="frame" x="0.0" y="0.0" width="150" height="169.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="150" height="180"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="150" id="hDB-l7-wcw"/>
-                                                                <constraint firstAttribute="height" constant="175" id="pmX-Pk-HWY"/>
+                                                                <constraint firstAttribute="height" constant="180" id="pmX-Pk-HWY"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jesse Pinkman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9av-UT-BCr">
-                                                            <rect key="frame" x="170" y="0.0" width="219" height="25"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                            <nil key="highlightedColor"/>
-                                                            <color key="shadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jesse Pinkman" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9av-UT-BCr">
+                                                            <rect key="frame" x="170" y="0.0" width="219" height="27"/>
+                                                            <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="23"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                                            <color key="highlightedColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </label>
                                                     </subviews>
+                                                    <color key="backgroundColor" red="0.1976798773" green="0.28891414399999998" blue="0.065320439640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="tintColor" red="0.31796568629999999" green="0.63230776789999998" blue="0.31072705979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="180" id="uIS-sx-Q1b"/>
+                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="7Cs-4H-7bR" firstAttribute="leading" secondItem="Jfd-Gc-43c" secondAttribute="leading" constant="5" id="5It-0X-IDt"/>
+                                                <constraint firstItem="G3j-bD-MUc" firstAttribute="top" secondItem="Jfd-Gc-43c" secondAttribute="topMargin" id="5QJ-Pa-wOz"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="G3j-bD-MUc" secondAttribute="bottom" id="LVd-sg-xR7"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="G3j-bD-MUc" secondAttribute="trailing" id="MhQ-Xu-SHA"/>
+                                                <constraint firstItem="G3j-bD-MUc" firstAttribute="leading" secondItem="Jfd-Gc-43c" secondAttribute="leadingMargin" id="Z1d-qS-Htd"/>
                                                 <constraint firstAttribute="bottom" secondItem="7Cs-4H-7bR" secondAttribute="bottom" constant="10" id="btq-dH-OUm"/>
                                                 <constraint firstItem="7Cs-4H-7bR" firstAttribute="top" secondItem="Jfd-Gc-43c" secondAttribute="top" constant="20" id="ni6-wR-i4v"/>
                                                 <constraint firstAttribute="trailing" secondItem="7Cs-4H-7bR" secondAttribute="trailing" constant="20" id="uVJ-xk-TDG"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="0.31796568629999999" green="0.63230776789999998" blue="0.31072705979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="img" destination="4Gh-zS-MAT" id="f3P-XA-lJ6"/>
                                             <outlet property="nome" destination="9av-UT-BCr" id="Hh2-9X-Pp1"/>
@@ -105,10 +121,15 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ME6-JD-roI" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="X6T-Nn-WsB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" largeTitles="YES" id="X6T-Nn-WsB">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.95396190879999998" green="0.16462765600000001" blue="0.12519799009999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.050497308373451233" green="0.26546484231948853" blue="0.04713304340839386" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.010527651039228272" green="0.060257193976885649" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textShadowColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                        </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
@@ -124,6 +145,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Breaking_Bad_title_card" width="399" height="226"/>
         <image name="Jesse_Pinkman" width="220" height="292"/>
     </resources>
 </document>

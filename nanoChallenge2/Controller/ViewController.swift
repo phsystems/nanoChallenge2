@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         teble.dataSource = self
         teble.delegate = self
         
-        guard let url = URL(string: "https://breakingbadapi.com/api/characters") else { return }
+        guard let url = URL(string: "https://breakingbadapi.com/api/characters/1") else { return }
         
         let session = URLSession.shared
         
@@ -24,22 +24,26 @@ class ViewController: UIViewController {
         request.httpMethod = "GET"
         
         let task = session.dataTask(with: url, completionHandler: { data, response, error in
-            guard let response = response else {
-                return
-            }
-            guard error == nil else {
-                return
-            }
-            guard let data = data else {
-                return
-            }
+//            guard let response = response else {
+//                return
+//            }
+//            guard error == nil else {
+//                return
+//            }
+//            guard let data = data else {
+//                return
+//            }
             
-            do {
-                if let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any] {
-                    print(json)
+            if let data = data {
+            print(data)
+                do {
+                    
+                    let json = try JSONSerialization.jsonObject(with: data, options: [])
+                        print(json)
+                        //personagens.append(Personagem())
+                } catch let erro {
+                    print(erro.localizedDescription)
                 }
-            } catch let erro {
-                print(erro.localizedDescription)
             }
         })
         task.resume()

@@ -54,14 +54,46 @@
 		C0F55FA92296D06B0017CC0F /* nanoChallenge2 */ = {
 			isa = PBXGroup;
 			children = (
-				C0F55FAA2296D06B0017CC0F /* AppDelegate.swift */,
-				C0F55FAC2296D06B0017CC0F /* ViewController.swift */,
-				C0F55FAE2296D06B0017CC0F /* Main.storyboard */,
+				EB3F9BD52296D3F000663E04 /* Support */,
+				EB3F9BD42296D3E200663E04 /* View */,
+				EB3F9BD32296D3D000663E04 /* Controller */,
+				EB3F9BD22296D39600663E04 /* Model */,
 				C0F55FB12296D06C0017CC0F /* Assets.xcassets */,
-				C0F55FB32296D06C0017CC0F /* LaunchScreen.storyboard */,
-				C0F55FB62296D06C0017CC0F /* Info.plist */,
 			);
 			path = nanoChallenge2;
+			sourceTree = "<group>";
+		};
+		EB3F9BD22296D39600663E04 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EB3F9BD32296D3D000663E04 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C0F55FAC2296D06B0017CC0F /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EB3F9BD42296D3E200663E04 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C0F55FB32296D06C0017CC0F /* LaunchScreen.storyboard */,
+				C0F55FAE2296D06B0017CC0F /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EB3F9BD52296D3F000663E04 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				C0F55FAA2296D06B0017CC0F /* AppDelegate.swift */,
+				C0F55FB62296D06C0017CC0F /* Info.plist */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

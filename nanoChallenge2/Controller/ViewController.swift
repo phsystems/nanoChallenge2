@@ -10,11 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     var personagens = [Personagem]()
-    @IBOutlet weak var teble: UITableView!
+    @IBOutlet weak var table: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        teble.dataSource = self
-        teble.delegate = self
+        table.dataSource = self
+        table.delegate = self
         
         guard let url = URL(string: "https://breakingbadapi.com/api/characters/") else { return }
         
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
                         self.personagens.append(Personagem(id: pessoa["char_id"] as! Int, nome: pessoa["name"] as! String, aniver: pessoa["birthday"] as! String, ocupacao: pessoa["occupation"] as! [String], img: pessoa["img"] as! String, status: pessoa["status"] as! String, apelido: pessoa["nickname"] as! String, aparicoes: pessoa["appearance"] as! [Int], ator: pessoa["portrayed"] as! String ))
                     }
                     DispatchQueue.main.async {
-                        self.teble.reloadData()
+                        self.table.reloadData()
                     }
                 } catch let erro {
                     print(erro.localizedDescription)
@@ -54,8 +54,8 @@ extension ViewController: UITableViewDelegate{
 
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let nextScreenVC = segue.destination as? DetalheViewController, let data = sender as? Palestras {
-            nextScreenVC.palestra = data
+        if let nextScreenVC = segue.destination as? DetalheViewController, let data = sender as? Personagem {
+            nextScreenVC.personagem = data
         }
     }
     

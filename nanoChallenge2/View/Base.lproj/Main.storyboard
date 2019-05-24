@@ -95,8 +95,8 @@
                         <barButtonItem key="backBarButtonItem" title="Personagens" id="XUM-in-UKc"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="teble" destination="nII-Lo-xlP" id="QDv-Jg-INE"/>
-                        <segue destination="KfY-9H-PMv" kind="show" id="pNj-Dk-phb"/>
+                        <outlet property="table" destination="nII-Lo-xlP" id="uRf-eo-GTN"/>
+                        <segue destination="KfY-9H-PMv" kind="show" identifier="detail" id="pNj-Dk-phb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -279,6 +279,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yru-PU-fo2"/>
                     </view>
+                    <connections>
+                        <outlet property="aniversario" destination="o60-Or-qBy" id="MMD-q0-SjP"/>
+                        <outlet property="aparicoes" destination="47I-F0-L8S" id="Rpl-68-Fe7"/>
+                        <outlet property="apelido" destination="Q9i-Sp-gFa" id="JGD-8P-1Mh"/>
+                        <outlet property="ator" destination="BQw-zw-JHa" id="wyz-br-UtF"/>
+                        <outlet property="image" destination="XHJ-1Z-9Mb" id="URu-e1-QVs"/>
+                        <outlet property="nome" destination="ACl-r8-pxb" id="cea-cH-pbW"/>
+                        <outlet property="ocupacoes" destination="Sv9-5j-Xta" id="0h2-OT-u6O"/>
+                        <outlet property="status" destination="nsy-MD-UuW" id="Lzi-o4-CtC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VEv-4x-HXM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

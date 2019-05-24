@@ -10,9 +10,25 @@ import UIKit
 
 class DetalheViewController: UIViewController {
 
+    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var ator: UILabel!
+    @IBOutlet weak var nome: UILabel!
+    @IBOutlet weak var aniversario: UILabel!
+    @IBOutlet weak var ocupacoes: UILabel!
+    @IBOutlet weak var status: UILabel!
+    @IBOutlet weak var apelido: UILabel!
+    @IBOutlet weak var aparicoes: UILabel!
+    var personagem = Personagem()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//        image = personagem.image
+//        ator = personagem.ator
+//        nome = personagem.nome
+//        aniversario = personagem.aniversario
+//        ocupacoes = personagem.ocupacoes
+//        status = personagem.status
+//        apelido = personagem.apelido
+//        aparicoes = personagem.aparicoes
         // Do any additional setup after loading the view.
     }
     

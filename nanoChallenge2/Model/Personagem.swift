@@ -30,5 +30,16 @@ class Personagem{
         self.aparicoes = aparicoes
         self.ator = ator
     }
+    init(){
+        self.id = 0
+        self.nome = ""
+        self.aniversario = ""
+        self.ocupacao = []
+        self.img = ""
+        self.status = ""
+        self.apelido = ""
+        self.aparicoes = []
+        self.ator = ""
+    }
 }
 

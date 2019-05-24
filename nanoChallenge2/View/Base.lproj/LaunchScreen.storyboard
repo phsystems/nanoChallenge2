@@ -20,10 +20,11 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="164099155-breaking-bad-wallpapers" translatesAutoresizingMaskIntoConstraints="NO" id="bf1-TK-PBh">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.85224640370000004" green="0.63917112350000005" blue="0.1191716716" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.69999999999999996" height="1"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.085534348836242849" green="0.12809268304670052" blue="0.052576790178385423" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.92642205950000001" green="0.7420198321" blue="0.15576270219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bf1-TK-PBh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="978-h3-kc5"/>
                             <constraint firstItem="bf1-TK-PBh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CM3-eq-a8r"/>

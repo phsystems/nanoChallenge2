@@ -48,16 +48,16 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate{
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: "detail", sender: )
-//    }
-//
-//
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let nextScreenVC = segue.destination as? DetalheViewController, let data = sender as? Palestras {
-//            nextScreenVC.palestra = data
-//        }
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "detail", sender: personagens[indexPath.row])
+    }
+
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let nextScreenVC = segue.destination as? DetalheViewController, let data = sender as? Palestras {
+            nextScreenVC.palestra = data
+        }
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200

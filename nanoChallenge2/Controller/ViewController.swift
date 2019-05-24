@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         teble.dataSource = self
         teble.delegate = self
         
-        guard let url = URL(string: "https://breakingbadapi.com/api/characters/1") else { return }
+        guard let url = URL(string: "https://breakingbadapi.com/api/characters/") else { return }
         
         let session = URLSession.shared
         
@@ -24,23 +24,16 @@ class ViewController: UIViewController {
         request.httpMethod = "GET"
         
         let task = session.dataTask(with: url, completionHandler: { data, response, error in
-//            guard let response = response else {
-//                return
-//            }
-//            guard error == nil else {
-//                return
-//            }
-//            guard let data = data else {
-//                return
-//            }
             
             if let data = data {
-            print(data)
                 do {
-                    
-                    let json = try JSONSerialization.jsonObject(with: data, options: [])
-                        print(json)
-                        //personagens.append(Personagem())
+                    let json = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]]
+                    for pessoa in json ?? [] {
+                        self.personagens.append(Personagem(id: pessoa["char_id"] as! Int, nome: pessoa["name"] as! String, aniver: pessoa["birthday"] as! String, ocupacao: pessoa["occupation"] as! [String], img: pessoa["img"] as! String, status: pessoa["status"] as! String, apelido: pessoa["nickname"] as! String, aparicoes: pessoa["appearance"] as! [Int], ator: pessoa["portrayed"] as! String ))
+                    }
+                    DispatchQueue.main.async {
+                        self.teble.reloadData()
+                    }
                 } catch let erro {
                     print(erro.localizedDescription)
                 }
@@ -48,8 +41,9 @@ class ViewController: UIViewController {
         })
         task.resume()
         
-        
     }
+    
+    
 }
 
 extension ViewController: UITableViewDelegate{
@@ -81,7 +75,14 @@ extension ViewController: UITableViewDataSource{
         
         cell.nome.text = personagens[indexPath.row].nome
         cell.id = personagens[indexPath.row].id
-        cell.img.image = UIImage(named: personagens[indexPath.row].img)
+        
+        let url = URL(string: personagens[indexPath.row].img)!
+        
+        let data = try? Data(contentsOf: url)
+        
+        if let imageData = data {
+            cell.img.image = UIImage(data: imageData)
+        }
         
         return cell
     }

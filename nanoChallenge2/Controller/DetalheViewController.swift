@@ -30,7 +30,7 @@ class DetalheViewController: UIViewController {
         }
         ator.text = personagem.ator
         nome.text = personagem.nome
-        aniversario.text = personagem.aniversario
+        aniversario.text = personagem.aniversario != "Unknown" ? personagem.aniversario : "Desconhecido"
         ocupacoes.text = format(array: personagem.ocupacao)
         status.text = personagem.status
         apelido.text = personagem.apelido
@@ -39,12 +39,20 @@ class DetalheViewController: UIViewController {
     }
     
     func format(array: [Any]) -> String{
-        if array 
         var text = ""
-        for item in array {
-            text += "\(item)"
-            if item != array[array.count]  {
-                text += ", "
+        if let data = array as? [Int]{
+            for num in data{
+                text += "\(num)"
+                if num != data.last {
+                    text += ", "
+                }
+            }
+        } else {
+            for item in array {
+                text += "\(item)"
+                if item as! String != array.last as! String {
+                    text += ", "
+                }
             }
         }
         return text

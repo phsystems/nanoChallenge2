@@ -21,18 +21,34 @@ class DetalheViewController: UIViewController {
     var personagem = Personagem()
     override func viewDidLoad() {
         super.viewDidLoad()
-//        image = personagem.image
-//        ator = personagem.ator
-//        nome = personagem.nome
-//        aniversario = personagem.aniversario
-//        ocupacoes = personagem.ocupacoes
-//        status = personagem.status
-//        apelido = personagem.apelido
-//        aparicoes = personagem.aparicoes
+        let url = URL(string: personagem.img)!
+        
+        let data = try? Data(contentsOf: url)
+        
+        if let imageData = data {
+            image.image = UIImage(data: imageData)
+        }
+        ator.text = personagem.ator
+        nome.text = personagem.nome
+        aniversario.text = personagem.aniversario
+        ocupacoes.text = format(array: personagem.ocupacao)
+        status.text = personagem.status
+        apelido.text = personagem.apelido
+        aparicoes.text = format(array: personagem.aparicoes)
         // Do any additional setup after loading the view.
     }
     
-
+    func format(array: [Any]) -> String{
+        if array 
+        var text = ""
+        for item in array {
+            text += "\(item)"
+            if item != array[array.count]  {
+                text += ", "
+            }
+        }
+        return text
+    }
     /*
     // MARK: - Navigation
 

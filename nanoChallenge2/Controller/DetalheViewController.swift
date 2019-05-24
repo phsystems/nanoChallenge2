@@ -42,7 +42,7 @@ class DetalheViewController: UIViewController {
         var text = ""
         if let data = array as? [Int]{
             for num in data{
-                text += "\(num)"
+                text += "Temporada \(num)"
                 if num != data.last {
                     text += ", "
                 }

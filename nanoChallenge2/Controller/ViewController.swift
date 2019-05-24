@@ -73,6 +73,8 @@ extension ViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? CellTableViewCell else { fatalError() }
         
+        
+        
         cell.nome.text = personagens[indexPath.row].nome
         cell.id = personagens[indexPath.row].id
         
